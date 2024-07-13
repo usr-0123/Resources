@@ -20,3 +20,11 @@ git remote get-url origin
 ```
 git remote remove origin
 ```
+
+# Docker
+## MSSQL server in docker
+### Pull an image
+docker pull mcr.microsoft.com/mssql/server:2022-latest
+
+### Running
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD={PASSWORD}" -p 1433:1433 -d --name dev-sqlserver mcr.microsoft.com/mssql server:2022-latest
